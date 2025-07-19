@@ -104,13 +104,13 @@
               <div class="portfolio-description">
                 <h2>Retirement Benefits Management System</h2>
                 <p>
-                  A comprehensive retirement benefits management system built using ASP.NET Core and Microsoft SQL Server. 
+                  A comprehensive retirement benefits management system built using Asp.net, ASP.NET Core and Microsoft SQL Server. 
                   This enterprise-level application streamlines retirement benefit processing and management while ensuring 
                   robust security and efficient performance.
                 </p>
                 <p>
-                  The system features automated benefit calculations, real-time reporting, and seamless integration with 
-                  existing HR systems. Security was a top priority, with implementation of thorough VAPT (Vulnerability 
+                  The system features automated benefit calculations, real-time reporting, Powered AI, and seamless integration with 
+                  existing HR systems. Security was a top priority, with implementation of through VAPT (Vulnerability 
                   Assessment and Penetration Testing) measures.
                 </p>
 
@@ -131,11 +131,25 @@
                   <strong>Key Features:</strong>
                 </p>
                 <ul>
-                  <li>Secure user authentication and role-based authorization</li>
-                  <li>Automated benefit calculations and processing</li>
-                  <li>Real-time reporting and analytics dashboard</li>
-                  <li>Integration with existing HR systems</li>
                   <li>Comprehensive security testing and VAPT implementation</li>
+                  <li>Identified and successfully mitigated critical security issues including Cross-Site Scripting (XSS), SQL Injection,
+                    and Insecure Deserialization in web applications. Collaborated with developers to remediate flaws and harden
+                    applications against exploitation.
+                  </li>
+                  <li>Developed key features of a retirement benefits management system including OCR using ASP.NET Core and
+                    Microsoft SQL Server, contributing to core business logic and database functionality.
+                  </li>
+                  <li>
+                    Implemented and fine-tuned Web Application Firewall (WAF) rules to prevent malicious traffic and enforce HTTP
+                    security policies.
+                  </li>
+                  <li>Engineered core modules of retirement benefits system utilizing ASP.NET Core and Microsoft SQL Server,
+                    enhancing data processing speeds by 20-25% and streamlining benefit calculations for 5,000+ users.
+                  </li>
+                  <li>Collaborated to align technical implementation with business requirements and security standards.</li>
+                  <li>Real-time reporting and analytics dashboard.</li>
+                  <li>Real time chat powered by AI Chatbots.</li>
+                  <li>Integration with existing HR systems.</li>
                 </ul>
 
               </div>
@@ -177,7 +191,7 @@
                 <p>
                   An integrated Human Resource Management System (HRMS) and payroll platform that streamlines HR operations 
                   and automates payroll processing. The system focuses on front-end functionality using JavaScript and 
-                  backend development with C#.
+                  backend development with Asp.net.
                 </p>
                 <p>
                   The platform includes comprehensive employee management features, automated payroll calculations, 
@@ -187,8 +201,12 @@
                   <strong>Key Features:</strong>
                 </p>
                 <ul>
-                  <li>Modern frontend built with JavaScript</li>
-                  <li>Robust backend using C# and SQL</li>
+                  <li>
+                    Implemented and fine-tuned Web Application Firewall (WAF) rules to prevent malicious traffic and enforce HTTP
+                    security policies.
+                  </li>
+                  <li>Modern frontend built with JavaScript and other frameworks</li>
+                  <li>Robust backend using Asp.net and SQL</li>
                   <li>Comprehensive employee management</li>
                   <li>Automated payroll processing</li>
                   <li>Advanced security features for data protection</li>
@@ -202,7 +220,60 @@
                 <h3>Project Information</h3>
                 <ul>
                   <li><strong>Category</strong> Web Application</li>
-                  <li><strong>Technologies</strong> JavaScript, C#, SQL Server</li>
+                  <li><strong>Technologies</strong> JavaScript, Asp.net, SQL Server</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- DEVOPS & SCM Content -->
+        <div id="devops-content" style="display: none;">
+          <div class="portfolio-details-slider swiper init-swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="../port-folio/assets/img/dev-ops-1.jpg" alt="SCM Dashboard">
+              </div>
+              <div class="swiper-slide">
+                <img src="../port-folio/assets/img/dev-ops-2.jpg" alt="DEVOPS">
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="row justify-content-between gy-4 mt-4">
+            <div class="col-lg-8" data-aos="fade-up">
+              <div class="portfolio-description">
+                <h2>DevOps Automation & SCM Migration</h2>
+                <p>
+                  I led a complete transformation of the source control and deployment workflow from traditional Svn to modern DevOps practices with GitLab (CI/CD).
+                <p>
+                  As part of this transformation, I configured Jenkins pipelines for automated patch deployments, integrated SonarQube for static code analysis, and implemented a robust CI/CD pipeline. 
+                  These efforts improved release workflow efficiency by 40%, enhanced code quality, and established a secure, scalable foundation for DevOps practices within the organization.
+                </p>
+                <p>
+                  <strong>Key Features:</strong>
+                </p>
+                <ul>
+                  <li>Led the end-to-end migration from traditional SVN to a self-hosted GitLab server, improving version control
+                    reliability and team collaboration.</li>
+                  <li>Configured Jenkins pipelines and integrated SonarQube for static code analysis and code quality enforcement,
+                    designing and implementing a robust CI/CD pipeline that improved release workflow efficiency by 40% through
+                    automation and continuous integration practices.</li>
+                  <li>Contributed across teams to align security, performance, and business objectives in all development workflows.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-info">
+                <h3>Project Information</h3>
+                <ul>
+                  <li><strong>Category</strong> DevOps & Automation</li>
+                  <li><strong>Technologies</strong> GitLab, Jenkins, Docker, SonarQube, Playwright</li>
                 </ul>
               </div>
             </div>
@@ -225,7 +296,7 @@
       </div>
       <div class="container">
         <div class="copyright">
-          <span>&copy; 2024 All rights reserved.</span>
+          <span>&copy; 2025 All rights reserved.</span>
         </div>
         <div class="credits">
           Designed by ❤️
@@ -266,13 +337,20 @@
       if (project === 'retirement') {
         document.getElementById('retirement-content').style.display = 'block';
         document.getElementById('hrms-content').style.display = 'none';
+        document.getElementById('devops-content').style.display = 'none';
       } else if (project === 'hrms') {
-        document.getElementById('retirement-content').style.display = 'none';
         document.getElementById('hrms-content').style.display = 'block';
+        document.getElementById('retirement-content').style.display = 'none';
+        document.getElementById('devops-content').style.display = 'none';
+      } else if (project === 'devops') {
+        document.getElementById('retirement-content').style.display = 'none';
+        document.getElementById('hrms-content').style.display = 'none';
+        document.getElementById('devops-content').style.display = 'block';
       } else {
         // Default to retirement project if no parameter
         document.getElementById('retirement-content').style.display = 'block';
         document.getElementById('hrms-content').style.display = 'none';
+        document.getElementById('devops-content').style.display = 'none';
       }
 
       // Initialize Swiper for the visible slider
