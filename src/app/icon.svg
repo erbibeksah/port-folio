@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="16" fill="#080b11"/>
+  <!-- Modern B Monogram -->
+  <path d="M20 18h13c5.5 0 9.5 3 9.5 7.5s-3 6-7 6.8c4.5.8 8.5 3.7 8.5 8.7 0 6-5 9-11 9H20V18zm7.5 11h5.5c2.5 0 4-1.2 4-3.2s-1.5-3.3-4-3.3h-5.5v6.5zm0 16H33c3 0 4.5-1.5 4.5-3.5s-1.5-3.5-4.5-3.5h-5.5v7z" fill="#f8fafc"/>
+  <!-- Emerald Status Dot -->
+  <circle cx="48" cy="46" r="4.5" fill="#10b981"/>
+</svg>
+
