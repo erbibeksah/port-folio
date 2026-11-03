@@ -45,4 +45,8 @@ export const profileData: ProfileData = {
       handle: '+977 98629-67315',
     },
   ],
+  // Forminit Direct Integration (No .env needed - configured in codebase)
+  // Put your Forminit Form ID or full endpoint from https://forminit.com below:
+  forminitId: 'xzt2m4ikfiz',
+  forminitEndpoint: 'https://forminit.com/f/xzt2m4ikfiz',
 };

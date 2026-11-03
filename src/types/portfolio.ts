@@ -22,6 +22,8 @@ export interface ProfileData {
   avatarUrl: string;
   resumeUrl: string;
   socialLinks: SocialLink[];
+  forminitId?: string;
+  forminitEndpoint?: string;
 }
 
 export interface StoryPillar {
@@ -61,6 +63,10 @@ export interface ProjectItem {
   githubUrl?: string;
   liveUrl?: string;
   image: string;
+  videoUrl?: string;
+  videoPoster?: string;
+  videoDuration?: string;
+  hasDemo?: boolean;
 }
 
 export interface ExperienceItem {

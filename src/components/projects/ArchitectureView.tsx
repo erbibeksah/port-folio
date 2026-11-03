@@ -1,6 +1,7 @@
 import React from 'react';
 import { ProjectItem } from '@/types/portfolio';
 import { MetricCard } from '@/components/ui/MetricCard';
+import { ProjectVideoSection } from '@/components/projects/ProjectVideoSection';
 import { Shield, Server, CheckCircle2, Layers } from 'lucide-react';
 
 interface ArchitectureViewProps {
@@ -23,7 +24,10 @@ export const ArchitectureView: React.FC<ArchitectureViewProps> = ({ project }) =
         </div>
       </div>
 
-      {/* 2. Overview & Architecture Narrative */}
+      {/* 2. Interactive System Walkthrough & Video Demonstration */}
+      <ProjectVideoSection project={project} />
+
+      {/* 3. Overview & Architecture Narrative */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Architecture Story (8 cols) - No border strokes */}
         <div className="lg:col-span-8 space-y-8">

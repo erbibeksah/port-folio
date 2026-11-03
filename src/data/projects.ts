@@ -2,6 +2,59 @@ import { ProjectItem } from '@/types/portfolio';
 
 export const projectsData: ProjectItem[] = [
   {
+    id: 'kaazii',
+    slug: 'kaazii',
+    title: 'Kaazii',
+    tagline: 'Enterprise multi-tenant project management and HR platform with PostgreSQL schema isolation, Django REST Framework, and Next.js 16.',
+    category: 'Full Stack Web',
+    period: 'Dec 2025 - Present',
+    client: 'Darvilab Pvt. Ltd.',
+    metrics: [
+      { label: 'Tenant Architecture', value: 'Schema-Isolated' },
+      { label: 'WebSocket Latency', value: '< 50ms' },
+      { label: 'Type Safety & Test', value: '100% CI/CD' },
+    ],
+    overview:
+      'Architected and engineered Kaazii, a state-of-the-art multi-tenant enterprise project management and HR operations platform. Built with Django REST Framework backend and Next.js 16 (App Router) frontend, featuring schema-isolated PostgreSQL multi-tenancy, JWT RS256 asymmetric authentication, Redis WebSocket channels for live sprint collaboration, organizational hierarchy trees, blocker tracking, and granular RBAC module permissions.',
+    architectureStory:
+      'Multi-tenant enterprise operations demand absolute tenant data isolation without compromising query speed or real-time reactivity. We designed a dual-tier PostgreSQL schema structure for Kaazii separating global tenant registries from isolated organizational schemas (schema_{org_code}). The Next.js 16 App Router dashboard leverages Turbopack, TanStack Query v5 with optimistic UI updates, and strict Zod runtime validation schemas. Real-time task progress, blocker alerts, and sprint burndowns are broadcast through Redis-backed Django Channels over WebSockets. S3-compatible document storage was implemented using MinIO with asymmetric JWT RS256 signatures securing inter-service requests.',
+    techStack: [
+      'Next.js 16',
+      'React 19',
+      'TypeScript',
+      'Django REST Framework',
+      'Python 3.11',
+      'PostgreSQL',
+      'Redis',
+      'WebSockets',
+      'Docker',
+      'TanStack Query',
+      'MinIO S3',
+      'Zod',
+      'Tailwind CSS',
+    ],
+    features: [
+      'PostgreSQL schema-based multi-tenancy enforcing complete data isolation per organization (Users, Projects, Sprints, Tasks, Attendance).',
+      'Next.js 16 App Router frontend with Turbopack, TanStack Query v5, custom design tokens, and Phantom UI skeletons.',
+      'Real-time sprint planning, backlog management, timelogging, and blocker dependency tracking via Redis WebSocket channels.',
+      'Hierarchical HR management module with organizational trees, attendance logs, and leave approval workflows.',
+      'Granular Role-Based Access Control (RBAC) with module-level permission enforcement and workspace switching.',
+      'MinIO S3-compatible object storage for secure multi-tenant attachment and artifact handling.',
+      'Comprehensive Docker Compose orchestration and automated Lefthook Git hooks (Pytest, Ruff, Biome, TypeScript).',
+    ],
+    securityHighlights: [
+      'Cryptographic tenant boundary enforcement via PostgreSQL dynamic search paths based on validated X-Org-Code headers.',
+      'RS256 asymmetric signature JWT verification ensuring tamper-proof user claims and privilege validation.',
+      'Automated quality gate pipelines enforcing static analysis, linting, and 100% type safety before commit and push.',
+    ],
+    githubUrl: 'https://github.com/erbibeksah',
+    liveUrl: 'https://kaazii.com',
+    image: '/images/PMOS.png',
+    hasDemo: true,
+    videoDuration: '0:26 min system demo',
+    videoUrl: '/videos/pmos-demo.mp4',
+  },
+  {
     id: 'retirement-benefits',
     slug: 'retirement-benefits',
     title: 'Retirement Benefits Management System',
@@ -11,7 +64,7 @@ export const projectsData: ProjectItem[] = [
     client: 'Version Systems Pvt. Ltd.',
     metrics: [
       { label: 'Data Processing Speed', value: '+20-25%' },
-      { label: 'Active Beneficiaries', value: '5,000+' },
+      { label: 'Active Beneficiaries', value: '50,000+' },
       { label: 'Security Vulnerabilities', value: 'Zero Critical' },
     ],
     overview:
@@ -42,6 +95,9 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/erbibeksah',
     liveUrl: 'https://erbibeksah.com.np',
     image: '/images/RB.png',
+    hasDemo: true,
+    videoDuration: '3:19 min walkthrough',
+    videoUrl: '/videos/retirement-benefits-demo.mp4',
   },
   {
     id: 'exam-proctoring',
@@ -75,6 +131,9 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/erbibeksah',
     liveUrl: 'https://erbibeksah.com.np',
     image: '/images/exam-proctoring.png',
+    hasDemo: true,
+    videoDuration: '2:40 min live test',
+    videoUrl: '/videos/exam-proctoring-demo.mp4',
   },
   {
     id: 'video-cdn',
@@ -107,6 +166,9 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/erbibeksah',
     liveUrl: 'https://erbibeksah.com.np',
     image: '/images/video-cdn.png',
+    hasDemo: true,
+    videoDuration: '1:50 min latency test',
+    videoUrl: '/videos/video-cdn-demo.mp4',
   },
   {
     id: 'devops-migration',
@@ -140,5 +202,8 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/erbibeksah',
     liveUrl: 'https://erbibeksah.com.np',
     image: '/images/devops-migration.jpg',
+    hasDemo: true,
+    videoDuration: '2:10 min CI/CD pipeline',
+    videoUrl: '/videos/devops-migration-demo.mp4',
   },
 ];
