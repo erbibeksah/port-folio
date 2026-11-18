@@ -15,7 +15,7 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0 pointer-events-none opacity-20 overflow-hidden">
         <Image
           src="/images/hero-bg.jpg"
-          alt=""
+          alt="Bibek Kumar Sah - Software Engineer Portfolio Ambient Architecture"
           fill
           className="object-cover object-center filter blur-[1px]"
           priority
@@ -44,7 +44,8 @@ export const Hero: React.FC = () => {
             <GsapReveal delay={0.15} yOffset={30}>
               {/* Urban Headline */}
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-100 tracking-tight leading-[1.08] mb-5">
-                Hi, I&apos;m <span className="text-emerald-400">Bibek Kumar Sah</span>.
+                Hi, I&apos;m{' '}
+                <span className="text-emerald-400">Bibek Kumar Sah</span>.{' '}
                 <span className="block text-2xl sm:text-4xl lg:text-5xl text-slate-300 font-bold mt-2">
                   Software Engineer &amp; .NET Specialist
                 </span>

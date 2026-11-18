@@ -101,7 +101,7 @@ export const ProjectsGallery: React.FC = () => {
               {/* Body */}
               <div className="p-6 md:p-8">
                 <h3 className="text-xl sm:text-2xl font-bold text-slate-100 group-hover:text-emerald-400 transition-colors mb-2.5 tracking-tight">
-                  <Link href={`/projects/${project.slug}`}>{project.title}</Link>
+                  <Link href={`/projects/${project.slug}/`}>{project.title}</Link>
                 </h3>
 
                 <p className="text-sm text-slate-400 leading-relaxed mb-6 font-normal">
@@ -142,7 +142,7 @@ export const ProjectsGallery: React.FC = () => {
             <div className="p-6 md:p-8 pt-2 flex flex-wrap items-center justify-between gap-3 text-xs">
               <div className="flex items-center gap-4">
                 <Link
-                  href={`/projects/${project.slug}`}
+                  href={`/projects/${project.slug}/`}
                   className="inline-flex items-center gap-2 text-emerald-400 font-bold hover:text-emerald-300 transition-colors font-mono"
                 >
                   <span>Read Full Case Study</span>

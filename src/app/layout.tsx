@@ -16,25 +16,36 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Bibek Sah',
-    template: '%s | Bibek Sah',
+    default: 'Bibek Kumar Sah | Software Engineer (.NET, Next.js, Cloud) | Kathmandu, Nepal',
+    template: '%s | Bibek Kumar Sah',
   },
   description:
-    'Software Engineer with 3+ years of experience in the .NET ecosystem, ASP.NET Core, application security (VAPT), and database optimization.',
+    'Portfolio of Bibek Kumar Sah — Software Engineer based in Kathmandu, Nepal. 3+ years engineering enterprise systems in ASP.NET Core, Next.js, Django, multi-tenant architectures, and VAPT application security.',
   keywords: [
-    'Bibek Sah',
     'Bibek Kumar Sah',
-    'Software Engineer',
-    'ASP.NET Core',
-    '.NET Developer',
-    'Application Security',
-    'VAPT',
-    'Kathmandu Nepal',
+    'Bibek Sah',
+    'Er. Bibek Sah',
+    'erbibeksah',
+    'Software Engineer Nepal',
+    'Software Engineer Kathmandu',
+    'ASP.NET Core Developer',
+    '.NET Specialist Nepal',
+    'Full Stack Developer Nepal',
+    'Next.js 16 Developer',
+    'Django REST Framework',
+    'Multi-Tenant Architecture',
+    'Application Security Engineer',
+    'VAPT Specialist',
+    'Database Optimization',
+    'PostgreSQL Specialist',
+    'Kaazii Developer',
+    'Darvilab Software Engineer',
   ],
   authors: [{ name: 'Bibek Kumar Sah', url: baseUrl }],
   creator: 'Bibek Kumar Sah',
+  publisher: 'Bibek Kumar Sah',
   alternates: {
-    canonical: baseUrl,
+    canonical: `${baseUrl}/`,
   },
   icons: {
     icon: [
@@ -45,11 +56,11 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: 'Bibek Sah | Software Engineer',
+    title: 'Bibek Kumar Sah | Software Engineer & Systems Architect',
     description:
-      'Software Engineer with 3+ years in ASP.NET Core, application security (VAPT), and database optimization.',
-    url: baseUrl,
-    siteName: 'Bibek Sah',
+      'Software Engineer based in Kathmandu, Nepal. 3+ years engineering enterprise systems in ASP.NET Core, Next.js, Django, multi-tenant architectures, and VAPT security.',
+    url: `${baseUrl}/`,
+    siteName: 'Bibek Kumar Sah',
     locale: 'en_US',
     type: 'profile',
     images: [
@@ -57,7 +68,7 @@ export const metadata: Metadata = {
         url: `${baseUrl}/images/profile-img2.jpg`,
         width: 717,
         height: 1080,
-        alt: 'Bibek Kumar Sah - Software Engineer',
+        alt: 'Bibek Kumar Sah - Software Engineer & Systems Architect',
       },
     ],
   },
@@ -65,14 +76,21 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@erbibeksah',
     creator: '@erbibeksah',
-    title: 'Bibek Sah | Software Engineer',
+    title: 'Bibek Kumar Sah | Software Engineer',
     description:
-      'Software Engineer with 3+ years in ASP.NET Core, application security (VAPT), and database optimization.',
+      'Software Engineer based in Kathmandu, Nepal. 3+ years in ASP.NET Core, Next.js, Django, multi-tenant architectures, and application security.',
     images: [`${baseUrl}/images/profile-img2.jpg`],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -81,50 +99,89 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const schemaGraph = {
+  // Google Official ProfilePage & Person Structured Data (Schema.org)
+  const profilePageSchema = {
     '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Person',
-        '@id': `${baseUrl}/#person`,
-        name: 'Bibek Kumar Sah',
-        alternateName: 'Bibek Sah',
-        jobTitle: 'Software Engineer',
-        worksFor: {
-          '@type': 'Organization',
-          name: 'Darvilab Pvt. Ltd.',
-        },
-        alumnusOf: {
-          '@type': 'CollegeOrUniversity',
-          name: 'RK University',
-        },
-        url: baseUrl,
-        email: 'mailto:er.bibeksah@gmail.com',
-        telephone: '+977-9862967315',
-        image: `${baseUrl}/images/profile-img2.jpg`,
-        sameAs: [
-          'https://linkedin.com/in/erbibeksah',
-          'https://github.com/erbibeksah',
-          'https://erbibeksah.com.np',
-        ],
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Kathmandu',
-          addressCountry: 'Nepal',
-        },
+    '@type': 'ProfilePage',
+    '@id': `${baseUrl}/#profilepage`,
+    url: `${baseUrl}/`,
+    name: 'Bibek Kumar Sah Portfolio',
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': `${baseUrl}/#website`,
+      url: `${baseUrl}/`,
+      name: 'Bibek Kumar Sah - Official Portfolio & Engineering Case Studies',
+      description:
+        'Software Engineer specializing in .NET ecosystem, Next.js, Django, multi-tenant systems, application security (VAPT), and database optimization.',
+    },
+    mainEntity: {
+      '@type': 'Person',
+      '@id': `${baseUrl}/#person`,
+      name: 'Bibek Kumar Sah',
+      alternateName: ['Bibek Sah', 'Er. Bibek Sah', 'erbibeksah'],
+      jobTitle: 'Software Engineer',
+      description:
+        'Software Engineer with 3+ years of experience specializing in ASP.NET Core, Next.js, Django REST Framework, multi-tenant architectures, and OWASP application security.',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Darvilab Pvt. Ltd.',
+        url: 'https://darvilab.com',
       },
-      {
-        '@type': 'WebSite',
-        '@id': `${baseUrl}/#website`,
-        url: baseUrl,
-        name: 'Bibek Sah Portfolio',
-        description:
-          'Software Engineer specializing in .NET ecosystem, ASP.NET Core, application security (VAPT), and database optimization.',
-        publisher: {
-          '@id': `${baseUrl}/#person`,
-        },
+      alumnusOf: {
+        '@type': 'CollegeOrUniversity',
+        name: 'RK University',
+        url: 'https://rku.ac.in',
       },
-    ],
+      url: `${baseUrl}/`,
+      email: 'mailto:er.bibeksah@gmail.com',
+      telephone: '+977-9862967315',
+      image: `${baseUrl}/images/profile-img2.jpg`,
+      sameAs: [
+        'https://linkedin.com/in/erbibeksah',
+        'https://github.com/erbibeksah',
+        'https://x.com/erbibeksah',
+        'https://erbibeksah.com.np',
+      ],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Kathmandu',
+        addressCountry: 'Nepal',
+      },
+      knowsAbout: [
+        'ASP.NET Core',
+        'C#',
+        '.NET Framework',
+        'Next.js 16',
+        'React 19',
+        'TypeScript',
+        'Django REST Framework',
+        'Python',
+        'PostgreSQL',
+        'Microsoft SQL Server',
+        'Multi-Tenant Architecture',
+        'Vulnerability Assessment and Penetration Testing (VAPT)',
+        'OWASP Top 10 Security',
+        'Redis & WebSockets',
+        'Docker',
+        'CI/CD Pipelines',
+        'MinIO S3 Storage',
+      ],
+      knowsLanguage: ['English', 'Nepali', 'Hindi', 'Maithili'],
+    },
+  };
+
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${baseUrl}/#website`,
+    url: `${baseUrl}/`,
+    name: 'Bibek Kumar Sah Portfolio',
+    description:
+      'Official portfolio of Bibek Kumar Sah. Software Engineer specializing in ASP.NET Core, Next.js, Django, multi-tenancy, and application security.',
+    publisher: {
+      '@id': `${baseUrl}/#person`,
+    },
+    inLanguage: 'en-US',
   };
 
   return (
@@ -132,7 +189,11 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body className="min-h-screen flex flex-col bg-[#080b11] text-slate-100 antialiased selection:bg-emerald-500/20 selection:text-emerald-300 relative">

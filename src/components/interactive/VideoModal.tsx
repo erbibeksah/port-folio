@@ -432,7 +432,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ project, isOpen, onClose
             {/* Bottom Action CTA */}
             <div className="pt-6 mt-6 flex flex-col gap-2.5">
               <Link
-                href={`/projects/${project.slug}`}
+                href={`/projects/${project.slug}/`}
                 onClick={onClose}
                 className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-emerald-500 text-slate-950 font-bold text-xs uppercase tracking-wider hover:bg-emerald-400 transition-colors shadow-lg shadow-emerald-500/20"
               >

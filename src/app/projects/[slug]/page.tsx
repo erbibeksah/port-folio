@@ -30,32 +30,43 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   }
 
   const projectUrl = `${baseUrl}/projects/${project.slug}/`;
+  const seoTitle = `${project.title} — Engineering Case Study`;
+  const seoDescription = `${project.tagline} Architected and built by Bibek Kumar Sah using ${project.techStack.slice(0, 4).join(', ')}.`;
 
   return {
-    title: project.title,
-    description: project.tagline,
+    title: seoTitle,
+    description: seoDescription,
+    keywords: [
+      project.title,
+      ...project.techStack,
+      'Bibek Kumar Sah',
+      'Engineering Case Study',
+      'Software Architecture',
+      'Production System Design',
+      project.category,
+    ],
     alternates: {
       canonical: projectUrl,
     },
     openGraph: {
-      title: `${project.title} | Bibek Sah`,
-      description: project.tagline,
+      title: `${project.title} — Case Study | Bibek Kumar Sah`,
+      description: seoDescription,
       url: projectUrl,
-      siteName: 'Bibek Sah',
+      siteName: 'Bibek Kumar Sah',
       type: 'article',
       images: [
         {
           url: `${baseUrl}${project.image}`,
           width: 1200,
           height: 630,
-          alt: project.title,
+          alt: `${project.title} - Architecture & System Case Study`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${project.title} | Bibek Sah`,
-      description: project.tagline,
+      title: `${project.title} — Case Study | Bibek Kumar Sah`,
+      description: seoDescription,
       images: [`${baseUrl}${project.image}`],
     },
   };
@@ -74,7 +85,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   const nextProject =
     projectIndex < projectsData.length - 1 ? projectsData[projectIndex + 1] : undefined;
 
-  // JSON-LD structured data for Google software / tech article
+  // JSON-LD structured data: SoftwareApplication schema
   const projectJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -84,15 +95,47 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Cross-platform',
     description: project.overview,
+    featureList: project.features.join('; '),
     author: {
       '@type': 'Person',
       name: 'Bibek Kumar Sah',
-      url: baseUrl,
+      url: `${baseUrl}/`,
+      sameAs: [
+        'https://linkedin.com/in/erbibeksah',
+        'https://github.com/erbibeksah',
+      ],
     },
     offers: {
       '@type': 'Offer',
       price: '0',
+      priceCurrency: 'USD',
     },
+  };
+
+  // JSON-LD BreadcrumbList schema (enables Google Rich Snippet Breadcrumbs)
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: `${baseUrl}/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Featured Projects',
+        item: `${baseUrl}/#projects`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: project.title,
+        item: `${baseUrl}/projects/${project.slug}/`,
+      },
+    ],
   };
 
   return (
@@ -100,6 +143,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(projectJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <article className="min-h-screen py-12 md:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
