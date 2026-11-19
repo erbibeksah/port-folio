@@ -16,11 +16,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Bibek Kumar Sah | Software Engineer (.NET, Next.js, Cloud) | Kathmandu, Nepal',
+    default: 'Bibek Kumar Sah | Software Engineer (.NET & Next.js) | Nepal',
     template: '%s | Bibek Kumar Sah',
   },
   description:
-    'Portfolio of Bibek Kumar Sah — Software Engineer based in Kathmandu, Nepal. 3+ years engineering enterprise systems in ASP.NET Core, Next.js, Django, multi-tenant architectures, and VAPT application security.',
+    'Software Engineer based in Kathmandu, Nepal. 3+ years in ASP.NET Core, Next.js, Django, multi-tenant architectures, and VAPT application security.',
   keywords: [
     'Bibek Kumar Sah',
     'Bibek Sah',

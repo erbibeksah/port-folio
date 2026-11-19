@@ -166,7 +166,7 @@ export const Hero: React.FC = () => {
                 <div className="relative w-full aspect-[4/4.8] rounded-2xl overflow-hidden bg-slate-900 mb-4 shadow-inner">
                   <Image
                     src={profileData.avatarUrl}
-                    alt={profileData.name}
+                    alt="Bibek Kumar Sah - Software Engineer and Systems Architect in Kathmandu, Nepal"
                     fill
                     sizes="(max-width: 768px) 100vw, 380px"
                     className="object-cover object-top hover:scale-105 transition-transform duration-700"

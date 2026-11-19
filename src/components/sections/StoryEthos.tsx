@@ -49,7 +49,7 @@ export const StoryEthos: React.FC = () => {
               <div className="relative w-24 h-28 sm:w-28 sm:h-32 rounded-2xl overflow-hidden shrink-0 shadow-lg bg-slate-900">
                 <Image
                   src="/images/profile-img.jpg"
-                  alt={profileData.name}
+                  alt="Bibek Kumar Sah - Software Engineer Profile and Career Ethos"
                   fill
                   sizes="120px"
                   className="object-cover object-top hover:scale-105 transition-transform duration-500"

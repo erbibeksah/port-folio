@@ -59,7 +59,7 @@ export const ProjectsGallery: React.FC = () => {
               >
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} - ${project.category} architecture case study by Bibek Kumar Sah`}
                   fill
                   sizes="(max-width: 768px) 100vw, 600px"
                   className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"

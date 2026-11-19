@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   }
 
   const projectUrl = `${baseUrl}/projects/${project.slug}/`;
-  const seoTitle = `${project.title} — Engineering Case Study`;
-  const seoDescription = `${project.tagline} Architected and built by Bibek Kumar Sah using ${project.techStack.slice(0, 4).join(', ')}.`;
+  const seoTitle = `${project.title} — Case Study`;
+  const seoDescription = project.tagline.length > 150 ? `${project.tagline.slice(0, 147)}...` : project.tagline;
 
   return {
     title: seoTitle,
